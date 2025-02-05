@@ -9,8 +9,11 @@ function Modal() {
     setOpen(true);
   }
 
-  const closeForm=()=>{
-    setOpen(false)
+   const closeForm=(e)=>{
+    if(e.target.classList("modal")){
+      setOpen(false)
+    }
+    
   }
 
   const handlesubmit=(e)=>{
@@ -54,7 +57,7 @@ function Modal() {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
    <h2>Fill Details</h2>
-   <form open={open} action="">
+   <form open={open} action="" onSubmit={handlesubmit}>
    <div className="form-group">
    <label>Username:</label>
    <input type="text" id="username" required/>
