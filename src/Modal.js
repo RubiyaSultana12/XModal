@@ -68,7 +68,7 @@ function Modal() {
    <input type="date" id="dob" required/>
    </div>
   
-   <button type="submit" className="submit-button" onClick={handlesubmit}>Submit</button>
+   <button type="submit" className="submit-button">Submit</button>
     </form>
    </div>
   </div>
