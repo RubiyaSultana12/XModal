@@ -39,6 +39,7 @@ function Modal() {
      
       {open && (
       <div className="modal" onClick={() => setOpen(false)}>
+        <></>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
    <h2>Fill Details</h2>
