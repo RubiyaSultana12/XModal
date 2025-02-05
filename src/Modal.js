@@ -7,25 +7,21 @@ const Modal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const email = document.getElementById("email").value.trim();
-    const username = document.getElementById("username").value.trim();
+   
     const dob = document.getElementById("dob").value.trim();
     const phone = document.getElementById("phone").value.trim();
 
-    if (!email || !username || !dob || !phone) {
-      alert("All fields are required.");
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert("Invalid email. Please check your email address.");
-      return;
-    }
+   
     
-    if (!/^\d{10}$/.test(phone)) {
-      alert("Invalid phone number. Please enter a 10-digit phone number.");
-      return;
-    }
+    if(phone.length !==10 || isNaN(phone)){
+    alert("Invalid Phone number. Please enter a 10-digit phone number. ")
+    return
+  }
+ 
+  if(dob>currentdate){
+    alert("Invalid date of birth. Date of birth cannot be in the fututre");
+    return
+  }
     
     setIsOpen(false);
   };
