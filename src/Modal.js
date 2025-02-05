@@ -14,14 +14,16 @@ const Modal = () => {
    
     
     if(phone.length !==10 || isNaN(phone)){
-    alert("Invalid Phone number. Please enter a 10-digit phone number. ")
+    alert("Invalid phone number. Please enter a 10-digit phone number. ")
     return
   }
  
-  if(dob>currentdate){
-    alert("Invalid date of birth. Date of birth cannot be in the fututre");
-    return
-  }
+    const currentDate = new Date();
+    const enteredDate = new Date(dob);
+    if (enteredDate > currentDate) {
+      alert("Invalid date of birth. Date of birth cannot be in the future.");
+      return;
+    }
     
     setIsOpen(false);
   };
