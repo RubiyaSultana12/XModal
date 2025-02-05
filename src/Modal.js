@@ -42,7 +42,7 @@ function Modal() {
         <button type="button" className="submit-button" onClick={openForm}>Open Form</button>
       )}
       {open && (
-      <div className="modal" onClick={closeForm}>
+      <div className="modal">
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
    <h2>Fill Details</h2>
