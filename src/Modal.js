@@ -24,7 +24,7 @@ function Modal() {
   const phoneNum=contact.value
     
   if(phoneNum.length !==10 || isNaN(phoneNum)){
-    alert("Invalid Phone number. Please enter a 10-digit phone number. ")
+    alert("Invalid phone number. Please enter a 10-digit phone number. ")
     return
   }
   const dateofBirth=document.getElementById("dob");
