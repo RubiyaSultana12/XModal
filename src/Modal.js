@@ -9,12 +9,7 @@ function Modal() {
     setOpen(true);
   }
 
-   const closeForm=(e)=>{
-     if(e.target.className==="modal"){
-      setOpen(false);
-     }
-    
-  }
+ 
 
   const handlesubmit=(e)=>{
     e.preventDefault();
@@ -44,11 +39,11 @@ function Modal() {
         <button type="button" className="submit-button" onClick={openForm}>Open Form</button>
       )}
       {open && (
-      <div className="modal" onClick={closeForm}>
+      <div className="modal" onClick={() => setOpen(false)}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
    <h2>Fill Details</h2>
-   <form open={open} action="" onSubmit={handlesubmit}>
+   <form onSubmit={handlesubmit}>
    <div className="form-group">
    <label>Username:</label>
    <input type="text" id="username" required/>
