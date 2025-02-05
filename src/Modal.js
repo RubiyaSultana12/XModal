@@ -9,10 +9,8 @@ function Modal() {
     setOpen(true);
   }
 
-   const closeForm=(e)=>{
-    if (e.target.classList.contains("modal")) {
+   const closeForm=()=>{
       setOpen(false)
-    }
     
   }
 
