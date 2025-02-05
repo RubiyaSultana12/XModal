@@ -10,7 +10,7 @@ function Modal() {
   }
 
    const closeForm=(e)=>{
-    if(e.target.classList("modal")){
+    if (e.target.classList.contains("modal")) {
       setOpen(false)
     }
     
@@ -19,30 +19,21 @@ function Modal() {
   const handlesubmit=(e)=>{
     e.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const username = document.getElementById("username").value;
+ 
   const contact=document.getElementById("phone");
   const phoneNum=contact.value
-
-  const dateofBirth=document.getElementById("dob");
-  const currentdate=new Date();
-  const enterdate=new Date(dateofBirth).value;
-
-  if (!email || !username || !phoneNum || !enterdate ) {
-    alert("Please Enter all fields are required.");
-    return;
-  }
+    
   if(phoneNum.length !==10 || isNaN(phoneNum)){
     alert("Invalid Phone number. Please enter a 10-digit phone number. ")
     return
   }
- 
+  const dateofBirth=document.getElementById("dob");
+  const currentdate=new Date();
+  const enterdate=new Date(dateofBirth).value;
   if(enterdate>currentdate){
     alert("Invalid date of birth. Date of birth cannot be in the fututre");
     return
   }
-
-
   setOpen(false);
 
   }
